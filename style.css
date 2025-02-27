@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Inter:wght@100..900&family=Poppins:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('back.jpg') no-repeat center center/cover;
+    background-color: #222; /* Fallback color */
+    padding: 20px;
+}
+
+/* Weather Container */
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px;
+}
+
+.search-box button {
+    width: 45px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Weather Box */
+.weather-box {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.weather-box img {
+    width: 50%;
+}
+
+.weather-box .temperature {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 15px 0 5px;
+}
+
+.weather-box .temperature span {
+    font-size: 20px;
+}
+
+.weather-box .description {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Weather Details */
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.weather-details .humidity,
+.weather-details .wind {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+.weather-details i {
+    font-size: 30px;
+    margin-right: 6px;
+}
+
+.weather-details span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.weather-details p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 🔹 Mobile Optimization */
+@media (max-width: 450px) {
+    .container {
+        padding: 15px;
+    }
+
+    .weather-box img {
+        width: 45%;
+    }
+
+    .weather-box .temperature {
+        font-size: 45px;
+    }
+
+    .search-box input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .weather-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .weather-details .humidity,
+    .weather-details .wind {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
